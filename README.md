@@ -82,4 +82,48 @@ Benefits of Factory Pattern
 
 Strategy Pattern
 
+The Strategy Pattern is a behavioral design pattern that enables selecting an algorithm at runtime. Instead of implementing multiple behaviors directly in a class, we define them as separate strategy classes and make the main class interchangeable with these strategies.
+
+<?php
+   interface example {
+      public function case($str);
+   }
+
+   class ucase implements example {
+      public function case($str) {
+         return strtoupper($str);
+      } 
+   }
+
+   class lcase implements example {
+      public function case($str) {
+         return strtolower($str);
+      }
+   }
+
+   class testdata {
+      private $data;
+
+      public function __construct($input) {
+         $this->data = $input;
+      }
+      public function process(example $type) {
+         return $this->data = $type->case($this->data);
+      }
+   }
+   $str = "hello";
+   $obj = new testdata($str);
+   echo $obj->process(new ucase) . PHP_EOL;  
+   $str = "HELLO";
+   echo $obj->process(new lcase);
+?>
+
+HELLO
+Hello
+
+
+Benefits of Strategy Pattern
+✔ Encapsulates different algorithms – Each strategy is independent.
+✔ Promotes Open/Closed Principle – New strategies can be added without modifying the existing code.
+✔ Improves maintainability – Reduces complex if-else statements in business logic.
 
