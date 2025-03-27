@@ -39,6 +39,7 @@ Logging
 Caching mechanisms
 
 
+
 Factory Pattern
 
 In this pattern, you dont declare the object of the desired class directly, but another class is provided whose static method creates the required object.
@@ -78,6 +79,7 @@ Benefits of Factory Pattern
 ✔ Encapsulates Object Creation – Reduces dependencies on concrete classes.
 ✔ Loose Coupling – Client code depends only on the interface, not on the actual implementation.
 ✔ Easy to Extend – New notification types can be added without modifying the client code.
+
 
 
 Strategy Pattern
