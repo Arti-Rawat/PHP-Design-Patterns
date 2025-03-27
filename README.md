@@ -73,3 +73,13 @@ The Factory Pattern is a creational design pattern that provides an interface fo
 ?>
 
 ktm Pulsar
+
+Benefits of Factory Pattern
+✔ Encapsulates Object Creation – Reduces dependencies on concrete classes.
+✔ Loose Coupling – Client code depends only on the interface, not on the actual implementation.
+✔ Easy to Extend – New notification types can be added without modifying the client code.
+
+
+Strategy Pattern
+
+
