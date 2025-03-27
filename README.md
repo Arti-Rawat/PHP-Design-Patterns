@@ -37,3 +37,39 @@ Database connections
 Configuration settings
 Logging
 Caching mechanisms
+
+
+Factory Pattern
+
+In this pattern, you dont declare the object of the desired class directly, but another class is provided whose static method creates the required object.
+
+The Factory Pattern is a creational design pattern that provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created. It promotes loose coupling and helps manage object creation efficiently.
+
+
+
+<?php
+   class Automobile {
+      private $bikeMake;
+      private $bikeModel;
+
+      public function __construct($make, $model) {
+         $this->bikeMake = $make;
+         $this->bikeModel = $model;
+      }
+
+      public function getMakeAndModel() {
+         return $this->bikeMake . ' ' . $this->bikeModel;
+      }
+   }
+
+   class AutomobileFactory {
+      public static function create($make, $model) {
+         return new Automobile($make, $model);
+      }
+   }
+
+   $pulsar = AutomobileFactory::create('ktm', 'Pulsar');
+   print_r($pulsar->getMakeAndModel());
+?>
+
+ktm Pulsar
