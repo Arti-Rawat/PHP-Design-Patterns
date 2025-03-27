@@ -129,3 +129,20 @@ Benefits of Strategy Pattern
 ✔ Promotes Open/Closed Principle – New strategies can be added without modifying the existing code.
 ✔ Improves maintainability – Reduces complex if-else statements in business logic.
 
+
+
+MVC Design Pattern
+
+MVC, which stands for Model, View and Controller, is a very popular softeware architecture pattern. Most of the PHP networks such as Laravel, Symfony etc. implement the MVC architecture.
+
+Model − Refers to the data structure. In this case, the database.
+
+View − Refers to the user interface. The HTML and CSS.
+
+Controller − The "middleman" doing the processing. Accepts input from the view, and works with the model. Self-explanatory, the PHP scripts and libraries themselves.
+
+Benefits of MVC Pattern
+✅ Separation of Concerns – Code is modular and easier to maintain.
+✅ Scalability – Easy to add new features without modifying the whole application.
+✅ Reusability – Views and Models can be reused across different parts of the application.
+✅ Better Collaboration – Developers can work on different components independently.
