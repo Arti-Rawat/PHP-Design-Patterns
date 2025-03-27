@@ -27,6 +27,12 @@ In the following code, the DataBaseConnector class can be instantiated only once
 
    var_dump($obj1 == $obj2);
 ?>
-DataBaseConnector object created for first time 
-connection object could not be created again
+DataBaseConnector object created for first time, 
+connection object could not be created again,
 bool(false)
+
+Use Cases of Singleton Pattern
+Database connections
+Configuration settings
+Logging
+Caching mechanisms
