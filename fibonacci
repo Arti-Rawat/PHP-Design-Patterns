@@ -1,0 +1,12 @@
+<?php
+function fibonacci($num)
+{
+  $fib = [0,1];
+  for ($i=2;$i<$num;$i++)
+  {
+    $fib[$i] = $fib[$i-1] + $fib[$i-2];
+  }
+  return $fib;
+}
+print_r(fibonacci(10));
+?>
