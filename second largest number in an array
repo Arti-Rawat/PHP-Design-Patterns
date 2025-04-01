@@ -1,0 +1,15 @@
+<?php
+function secondLargest($a)
+{
+  $a = array_unique($a); //Removes duplicate values from the array.
+  
+  rsort($a); //Sorts the array in descending order.
+  
+  return $a[1]??null; //Returns the second element (second largest number). If the array has less than two unique elements, it returns null.
+}
+
+$a = [1,2,3,4,7,7];
+
+//print_r(secondLargest($a));
+echo secondLargest($a);
+?>
