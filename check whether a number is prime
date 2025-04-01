@@ -1,0 +1,24 @@
+<?php
+function isPrime($n)
+{
+  if($n<2)
+{
+  return 'Not Prime : num < 2'; //If the number is less than 2, it's not prime.
+}
+else 
+{
+  for($i=2;$i<=sqrt($n);$i++) //Loops through numbers from 2 to the square root of the input number.
+  {
+  if($n % $i == 0) //If the number is divisible by any number in the loop, it’s not prime, so it returns false.
+  {
+    return 'Not Prime No.';
+  }
+  }
+  return $n." ".'Prime No.' ; //If no divisor is found, the number is prime, so it returns true
+}
+
+}
+
+$n = 999998727899999;
+echo isPrime($n);
+?>
