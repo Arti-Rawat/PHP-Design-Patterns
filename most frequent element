@@ -1,0 +1,14 @@
+<?php
+
+function mostFrequent($arr)
+{
+  $count = array_count_values($arr);
+  arsort($count);
+  return array_key_first($count);
+}
+
+$arr = [2,4,5,3,4,2,1,2,6,7,2,7,4,4,4,4,4];
+
+print_r(mostFrequent($arr));
+
+?>
