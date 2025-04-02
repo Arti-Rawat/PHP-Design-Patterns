@@ -1,0 +1,11 @@
+<?php
+
+function palindrome($str)
+{
+  return strtolower($str)===strtolower(strrev($str)); //Remove non-alphanumeric characters and convert to lowercase.//Reverse the string and compare with the original.
+//Returns True if the string is a palindrome, otherwise False.
+}
+
+$str = "madam";
+echo palindrome($str) ? "Palindrome" : "Not Palindrome" ;
+?>
