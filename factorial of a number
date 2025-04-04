@@ -1,0 +1,10 @@
+<?php
+
+function factorial($n)
+{
+ return ($n<=1) ? 1 : $n*factorial($n-1); // If $n is 1 or less, return 1 (since the factorial of 0 and 1 is 1).
+}
+//Recursive case: For values greater than 1, it calls factorial($n – 1) and multiplies it by $n, which keeps reducing until it reaches the base case.
+echo factorial(3);
+
+?>
