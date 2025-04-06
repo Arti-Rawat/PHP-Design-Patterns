@@ -2,8 +2,8 @@
 
 function mergeSorted($a,$b)
 {
-  return array_merge($a,$b);
-
+  return array_merge($a,$b);//array_merge($arr1, $arr2): This built-in PHP function merges the two input arrays $arr1 and $arr2 into a single array.
+  //The function does not guarantee that the merged array will remain sorted; it simply combines the arrays as they are.
 }
 
 $a = [2,4,6];
