@@ -1,0 +1,22 @@
+<?php
+
+function bubblesort($arr)
+{
+$n = count($arr);
+for($i=0;$i<$n-1;$i++) //Outer loop ($i): Runs through the array multiple times, each time excluding the last sorted element.
+{
+  for($j=0;$j<$n-$i-1;$j++)
+  {
+  if($arr[$j]>$arr[$j+1]) //Inner loop ($j): Compares adjacent elements in the array and swaps them if they are in the wrong order ($arr[$j] > $arr[$j + 1]).
+  {
+    list($arr[$j],$arr[$j+1]) = [$arr[$j+1],$arr[$j]]; //Swap: Uses list() to swap the elements without needing a temporary variable.
+  }
+  }
+}
+return $arr;
+}
+
+$arr = [64, 34, 25, 12, 22, 11, 90];
+print_r(bubblesort($arr));
+
+?>
