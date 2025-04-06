@@ -1,12 +1,12 @@
 <?php
 function fibonacci($num)
 {
-  $fib = [0,1];
+  $fib = [0,1]; //Initial Array: The function starts with an array $fib = [0, 1], which represents the first two Fibonacci numbers.
   for ($i=2;$i<$num;$i++)
   {
-    $fib[$i] = $fib[$i-1] + $fib[$i-2];
+    $fib[$i] = $fib[$i-1] + $fib[$i-2]; //Loop: The loop starts at index 2 and calculates each subsequent Fibonacci number as the sum of the previous two ($fib[$i] = $fib[$i – 1] + $fib[$i – 2]).
   }
-  return $fib;
+  return $fib; //Return: It returns the complete Fibonacci sequence up to the nth term.
 }
 print_r(fibonacci(10));
 ?>
