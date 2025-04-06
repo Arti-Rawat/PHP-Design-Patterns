@@ -2,9 +2,12 @@
 
 function mostFrequent($arr)
 {
-  $count = array_count_values($arr);
-  arsort($count);
-  return array_key_first($count);
+  $count = array_count_values($arr);//array_count_values($arr): This counts the occurrences of each value in the array and returns an associative array where the keys are the array elements and the values are their respective counts.
+
+  arsort($count); //arsort($counts): This sorts the counts in descending order, placing the most frequent element at the beginning.
+
+  return array_key_first($count); //array_key_first($counts): This returns the first key (the most frequent element) from the sorted array.
+
 }
 
 $arr = [2,4,5,3,4,2,1,2,6,7,2,7,4,4,4,4,4];
